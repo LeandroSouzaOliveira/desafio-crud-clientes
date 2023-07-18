@@ -9,12 +9,12 @@ import java.time.LocalDate;
 public class ClientDTO {
 
     private Long id;
-    @NotBlank
+    @NotBlank(message = "Campo requerido")
     private String name;
-    @NotBlank
+    @NotBlank(message = "Campo requerido")
     private String cpf;
     private Double income;
-    @PastOrPresent
+    @PastOrPresent(message = "Informe uma data menor que a data atual")
     private LocalDate birthDate;
     private Integer children;
 
